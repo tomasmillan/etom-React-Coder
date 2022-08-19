@@ -1,0 +1,47 @@
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: rgb(210, 202, 202);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+}
+.cardTitle{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(29, 25, 25);
+    text-transform: capitalize;
+    text-align: center;
+}
+.cardDescription{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+.cardPrice{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.cardBtn{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: rgba(140, 101, 230, 0.621);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    transition: 0.4s;
+
+    &:hover{
+        background: rgba(58, 19, 234, 0.749);
+        color: #fff;
+    
+    }
+}

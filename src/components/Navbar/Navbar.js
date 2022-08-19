@@ -4,6 +4,7 @@ import "../Navbar/navbar.scss";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { useRef } from "react";
+import CartWidget from "../Cart/CartWidget";
 
 export default function Navbar() {
   const navRef = useRef();
@@ -27,7 +28,7 @@ export default function Navbar() {
             <a href="/">Precios</a>
           </li>
           <li>
-            <a href="/">Carrito</a>
+            <CartWidget />
           </li>
         </ul>
         <button className="closeIcon" onClick={showNavbar}>
