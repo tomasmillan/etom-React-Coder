@@ -7,16 +7,15 @@ import { useRef } from "react";
 
 export default function Navbar() {
   const navRef = useRef();
-
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive");
   };
   return (
-    <>
+    <header>
+      <a href="/" className="logo">
+        <img src={logo} className="App-logo" alt="logo" />
+      </a>
       <nav ref={navRef}>
-        <a href="/" className="logo">
-          <img src={logo} className="App-logo" alt="logo" />
-        </a>
         <ul>
           <li>
             <a href="/">Inicio</a>
@@ -31,13 +30,13 @@ export default function Navbar() {
             <a href="/">Carrito</a>
           </li>
         </ul>
-        <button className="menuIcon" onClick={showNavbar}>
-          <FaBars />
+        <button className="closeIcon" onClick={showNavbar}>
+          <AiOutlineClose />
         </button>
       </nav>
-      <button className="closeIcon">
-        <AiOutlineClose />
+      <button className="menuIcon" onClick={showNavbar}>
+        <FaBars />
       </button>
-    </>
+    </header>
   );
 }
