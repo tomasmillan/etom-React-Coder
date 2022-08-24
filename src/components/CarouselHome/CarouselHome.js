@@ -1,5 +1,5 @@
 import Carousel from "nuka-carousel";
-import "../CarouselHome/CarouselStyle.scss";
+import "./CarouselStyle.scss";
 import imgArray from "../../utils/imgArray";
 
 export default function CarrouselHome() {
