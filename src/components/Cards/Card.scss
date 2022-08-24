@@ -1,16 +1,23 @@
 .cardContainer{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
     padding: 1.5rem;
     background-color: rgb(210, 202, 202);
-    width: 15rem;
-    height: 15rem;
     border-radius: 1rem;
+    width: 25%;
+}
+.cardImg{
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 5%;
 }
 .cardTitle{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: rgb(29, 25, 25);
     text-transform: capitalize;
@@ -43,5 +50,25 @@
         background: rgba(58, 19, 234, 0.749);
         color: #fff;
     
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .cardContainer{
+        width: 50%;
+    }
+    .cardDescription{
+        padding: 1rem 6rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .cardContainer{
+        width: 80%;
+    }
+    .cardDescription{
+        padding: 1rem 3rem;
+        line-height: 1.5rem;
     }
 }
