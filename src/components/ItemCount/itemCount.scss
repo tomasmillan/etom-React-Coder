@@ -32,7 +32,11 @@
         &:hover{
             background: #264e64;
         }
+        &.disabled{
+            background: #344;
+        }
     }
+   
     h4{
         color: #151b1f;
         margin-bottom: 0.1rem;

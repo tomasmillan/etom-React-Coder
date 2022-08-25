@@ -11,6 +11,7 @@ export default function ItemListContainer() {
           img={item.img}
           description={item.description}
           price={item.price}
+          productStock={item.productStock}
         />
       ))}
     </div>
