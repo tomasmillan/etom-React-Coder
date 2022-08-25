@@ -50,7 +50,10 @@
         align-items: center;
         justify-content: center;
 
-        .addCart{margin-left: 0;}
+        .addCart{
+            margin-left: 0;
+            margin-top: .5rem;
+        }
     }
     
 }
