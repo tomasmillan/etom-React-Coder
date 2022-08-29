@@ -5,3 +5,10 @@
 .carousel{
     z-index: -1;
 }
+@media only screen and (max-width: 1024px) {
+    .carousel ul{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+}

@@ -15,7 +15,12 @@ export default function CarrouselHome() {
         className="carousel"
       >
         {imgArray.map((e) => (
-          <img className="imgCarousel" src={e.img} alt="im a computer" />
+          <img
+            className="imgCarousel"
+            src={e.img}
+            alt="im a computer"
+            key={e.id}
+          />
         ))}
       </Carousel>
     </>

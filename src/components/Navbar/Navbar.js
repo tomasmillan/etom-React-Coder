@@ -17,7 +17,7 @@ export default function Navbar() {
         <img src={logo} className="App-logo" alt="logo" />
       </a>
       <nav ref={navRef}>
-        <ul>
+        <ul className="navbarList">
           <li>
             <a href="/">Inicio</a>
           </li>

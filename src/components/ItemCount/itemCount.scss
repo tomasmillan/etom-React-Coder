@@ -41,6 +41,12 @@
         color: #151b1f;
         margin-bottom: 0.1rem;
     }
+    .addingBtns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
 }
 @media only screen and (max-width: 1024px) {
     .addCartContainer{
@@ -49,6 +55,10 @@
         font-size: 1.2rem;
         align-items: center;
         justify-content: center;
+
+        .addingBtns{
+            flex-direction: row;
+        }
 
         .addCart{
             margin-left: 0;

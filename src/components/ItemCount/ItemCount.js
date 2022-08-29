@@ -25,13 +25,15 @@ const ItemCount = ({ stock = 0, initial = 0 }) => {
   };
   return (
     <div className="addCartContainer">
-      <button className="addingBtn" onClick={increment}>
-        <FaPlus />
-      </button>
-      <h4>{counter}</h4>
-      <button className="addingBtn" onClick={decrease}>
-        <FaMinus />
-      </button>
+      <div className="addingBtns">
+        <button className="addingBtn" onClick={decrease}>
+          <FaMinus />
+        </button>
+        <h4>{counter}</h4>
+        <button className="addingBtn" onClick={increment}>
+          <FaPlus />
+        </button>
+      </div>
       <button
         onClick={counter === 0 ? null : addProduct}
         className={`addCart ${counter === 0 ? "disabled" : ""}`}

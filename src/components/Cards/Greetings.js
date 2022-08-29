@@ -9,7 +9,10 @@ export default function Greetings(props) {
         <img className="cardImg" src={props.img} alt={props.description}></img>
         <div className="cardDescription">{props.description}</div>
         <div className="cardPrice">{"$ " + props.price}</div>
-        <div>{props.productStock}</div>
+        <div className="details">
+          <button>ver detalles</button>
+        </div>
+        <div>{"Stock Disponible: " + props.productStock}</div>
         <ItemCount stock={props.productStock} initial={0} />
       </div>
     </>

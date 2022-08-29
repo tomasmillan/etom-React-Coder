@@ -15,7 +15,7 @@ nav{
     z-index: 20;
 
 
-  & ul{
+  & .navbarList{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -67,7 +67,7 @@ nav{
       transition: 0.5s;
       transform: translateY(-100vh);
     }
-    ul{
+    .navbarList{
       flex-direction: column;    
       justify-content: center;  
       align-items: center;
