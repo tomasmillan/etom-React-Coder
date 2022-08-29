@@ -27,23 +27,34 @@ const Marvel = () => {
 
   return (
     <div className="cardsContainer">
-      {comics.map((item) => (
-        <Card key={item.id} style={{ width: "18rem" }}>
-          <Card.Img
-            className="marvelImg"
-            variant="top"
-            src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-            alt={item.thumbnail.title}
-          />
-          <Card.Body>
-            <Card.Title>{item.title}</Card.Title>
-            <Card.Text>{`Autores: ${item.creators.items[0]} ${item.creators.items[1]}`}</Card.Text>
-            {console.log(item.creators.items[0])}
-            <Card.Text>$ {item.prices[0].price}</Card.Text>
-            <Button variant="primary">Detalles</Button>
-          </Card.Body>
-        </Card>
-      ))}
+      {comics.map((item) => {
+        const { creators } = item;
+        const { items: creatorsList } = creators;
+        return (
+          <Card key={item.id} style={{ width: "18rem" }}>
+            <Card.Img
+              className="marvelImg"
+              variant="top"
+              src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
+              alt={item.thumbnail.title}
+            />
+            <Card.Body>
+              <Card.Title>{item.title}</Card.Title>
+              <Card.Text>
+                {creatorsList.map((creator) => {
+                  return (
+                    <li className="authors">
+                      {creator.role}: {creator.name}
+                    </li>
+                  );
+                })}
+              </Card.Text>
+              <Card.Text>$ {item.prices[0].price}</Card.Text>
+              <Button variant="primary">Detalles</Button>
+            </Card.Body>
+          </Card>
+        );
+      })}
     </div>
   );
 };
