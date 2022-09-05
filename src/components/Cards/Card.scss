@@ -52,14 +52,16 @@
     
     }
 }
-.details button{
+.details a{
     border-radius: 1rem;
-    padding: 12px;
+    padding: 8px;
     background: #344;
     color: #fff;
     transition: 0.3s all;
     text-transform: uppercase;
-    margin-top: 1rem;
+    margin: 0.8rem;
+    display: inline-block;
+    text-decoration: none;
 
     &:hover{
         background: #011638;

@@ -1,10 +1,10 @@
 import products from "../../utils/productList";
-import Greetings from "../Cards/Greetings";
+import Items from "../Cards/Item";
 import "../ItemsContainer/ItemList.scss";
 import { useEffect, useState } from "react";
 import promiseArray from "../../utils/promise";
 
-export default function ItemListContainer() {
+const ItemList = () => {
   const [dataProducts, setProducts] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function ItemListContainer() {
   return (
     <div className="itemsContainer">
       {dataProducts.map((item) => (
-        <Greetings
+        <Items
           key={item.id}
           title={item.title}
           img={item.img}
@@ -27,4 +27,6 @@ export default function ItemListContainer() {
       ))}
     </div>
   );
-}
+};
+
+export default ItemList;

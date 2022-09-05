@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { useRef } from "react";
 import CartWidget from "../Cart/CartWidget";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const navRef = useRef();
@@ -13,19 +14,19 @@ export default function Navbar() {
   };
   return (
     <header>
-      <a href="/" className="logo">
+      <Link to="/" className="logo">
         <img src={logo} className="App-logo" alt="logo" />
-      </a>
+      </Link>
       <nav ref={navRef}>
         <ul className="navbarList">
           <li>
-            <a href="/">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <a href="/">Catalogo</a>
+            <Link to="/product/1">Catalogo</Link>
           </li>
           <li>
-            <a href="/">Precios</a>
+            <Link to="/">Precios</Link>
           </li>
           <li>
             <CartWidget />

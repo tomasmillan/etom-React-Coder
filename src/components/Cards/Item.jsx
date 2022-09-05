@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import "../Cards/Card.scss";
 import ItemCount from "../ItemCount/ItemCount";
 
-export default function Greetings(props) {
+export default function Items(props) {
   return (
     <>
       <div className="cardContainer">
@@ -10,7 +11,8 @@ export default function Greetings(props) {
         <div className="cardDescription">{props.description}</div>
         <div className="cardPrice">{"$ " + props.price}</div>
         <div className="details">
-          <button>ver detalles</button>
+          <Link to="/product/1">ver detalles</Link>{" "}
+          {/*Para mostrar la maqueta de el detalle de productos */}
         </div>
         <div>{"Stock Disponible: " + props.productStock}</div>
         <ItemCount stock={props.productStock} initial={0} />

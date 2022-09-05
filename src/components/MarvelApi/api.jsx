@@ -4,11 +4,9 @@ import "./marvel.scss";
 import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Marvel = () => {
-  // const urlApi =
-  //   "https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=2c20336e3a63c7c58df83c3f7073863b&hash=41b2f00e60471590f713e494333b1879";
+const ApiProducts = () => {
 
-  const [comics, setComics] = useState([]);
+  const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
     axios
@@ -16,18 +14,18 @@ const Marvel = () => {
         "https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=2c20336e3a63c7c58df83c3f7073863b&hash=41b2f00e60471590f713e494333b1879"
       )
       .then((res) => {
-        setComics(res.data.data.results);
+        setApiData(res.data.data.results);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
-  console.log(comics);
+  console.log(apiData);
 
   return (
     <div className="cardsContainer">
-      {comics.map((item) => {
+      {apiData.map((item) => {
         const { creators } = item;
         const { items: creatorsList } = creators;
         return (
@@ -44,7 +42,7 @@ const Marvel = () => {
                 {creatorsList.map((creator) => {
                   return (
                     <li className="authors">
-                      {creator.role}: {creator.name}
+                      {creator.role}:   {creator.name}
                     </li>
                   );
                 })}
@@ -58,6 +56,5 @@ const Marvel = () => {
     </div>
   );
 };
-//
-// API KEY  120e95234087742ed201946af404d9cb9ace7447e2c20336e3a63c7c58df83c3f7073863b
-export default Marvel;
+
+export default ApiProducts;
