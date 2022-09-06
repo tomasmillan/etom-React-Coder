@@ -20,6 +20,7 @@ nav{
     margin: 0;
     list-style: none;
     display: inline-flex;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -33,7 +34,8 @@ nav{
 }
 
   .menuIcon, .closeIcon{
-    font-size: 25px;
+    margin-top: 2px;
+    font-size: 30px;
     visibility: hidden;
     display: none;
   }
@@ -41,6 +43,17 @@ nav{
     background: transparent;
     border: transparent;
     cursor: pointer;
+  }
+  .log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+
+    .navProfileImg{
+      width: 30px;
+      border-radius: 50%;
+    }
   }
   @media only screen and (max-width: 1024px) {
     .menuIcon{

@@ -7,7 +7,10 @@ export default function CarrouselHome() {
     <>
       <Carousel
         wrapAround={true}
-        slidesToShow={4}
+        slidesToShow={() => {
+          console.log(window.screen.width);
+          return 4;
+        }}
         autoplay={true}
         autoplayInterval={3000}
         cellAlign={"center"}
