@@ -45,7 +45,6 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      {console.log(item)}
       {isLoading ? (
         <ClipLoader color="#36d7b7" cssOverride={override} size="150" />
       ) : (

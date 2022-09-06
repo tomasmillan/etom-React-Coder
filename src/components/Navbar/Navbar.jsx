@@ -44,7 +44,9 @@ export default function Navbar() {
       <div className="log">
         {isAuthenticated ? (
           <>
-            <Link to="/profile:id">
+            <Link to="/profile">
+              {" "}
+              {/*profile:id para cuando tenga distintos ids */}
               {!isLoading && (
                 <img
                   src={user.picture}
