@@ -13,13 +13,14 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    promiseArray(products.find((item) => item.id == id))
+    promiseArray(products.find((item) => parseInt(item.id) == id))
       .then((product) => {
         setItem(product);
         setIsLoading(false);
+        console.log(typeof item.id);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   const override = {
     display: "flex",

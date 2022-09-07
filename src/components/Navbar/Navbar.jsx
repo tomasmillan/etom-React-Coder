@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/product/1">Catalogo</Link>
+            <Link to="/">Catalogo</Link>
           </li>
           <li>
             <Link to="/category/photography">Fotografia</Link>
