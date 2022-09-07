@@ -31,7 +31,13 @@ export default function Navbar() {
             <Link to="/product/1">Catalogo</Link>
           </li>
           <li>
-            <Link to="/">Precios</Link>
+            <Link to="/category/photography">Fotografia</Link>
+          </li>
+          <li>
+            <Link to="/category/home">Hogar</Link>
+          </li>
+          <li>
+            <Link to="/category/gamer">Gamer</Link>
           </li>
           <li>
             <CartWidget />

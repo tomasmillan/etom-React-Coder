@@ -11,8 +11,7 @@ export default function Items(props) {
         <div className="cardDescription">{props.description}</div>
         <div className="cardPrice">{"$ " + props.price}</div>
         <div className="details">
-          <Link to="/product/1">ver detalles</Link>{" "}
-          {/*Para mostrar la maqueta de el detalle de productos */}
+          <Link to={`/product/${props.id}`}>ver detalles</Link>
         </div>
         <div>{"Stock Disponible: " + props.productStock}</div>
         <ItemCount stock={props.productStock} initial={0} />

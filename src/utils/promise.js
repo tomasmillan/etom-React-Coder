@@ -5,7 +5,7 @@ let promiseArray = (task) => {
     if (ok) {
       setTimeout(() => {
         resolve(task);
-      }, 2000);
+      }, 600);
     } else {
       reject("error");
     }
@@ -13,6 +13,3 @@ let promiseArray = (task) => {
 };
 
 export default promiseArray;
-// promiseArray(products)
-//   .then((result) => console.log(result))
-//   .catch((err) => console.log(err));
