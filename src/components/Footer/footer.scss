@@ -1,0 +1,46 @@
+.footerContainer{
+    display: flex;
+    align-items: center;
+    background: #344;
+
+    .usefulLinks{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+
+        li{
+            text-decoration: none;
+            list-style: none;
+        }
+        .footerLinks{
+            color: white;
+            text-decoration: none;
+        }
+    }
+    .suscribeForm{
+        display: inline-flex;
+        flex-basis: 50%;
+        justify-content: center;
+        
+        input{
+            padding: 10px;
+            border: none;
+            margin-left: 10px;
+            border-radius: 1rem;
+        }
+    }
+    .copyAuthor{
+        position: fixed;
+        bottom: 0;
+        display: inline-flex;
+        width: 100%;
+        color: white;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+}

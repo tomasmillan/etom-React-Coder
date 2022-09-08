@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { Route, Routes } from "react-router-dom";
 import Profile from "./components/Authentication/Profile";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/category/:id" element={<ItemListContainer />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <Footer />
     </>
   );
 }
