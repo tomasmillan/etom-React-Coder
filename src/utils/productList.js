@@ -34,7 +34,7 @@ const products = [
     img: "https://buenosairesimport.com/3885-large_default/playstation-5.jpg",
     description:
       "Memoria RAM: 16GB, Resolucion: 3840px x 2160px, Incluye un control",
-    productStock: 2,
+    productStock: 20,
     price: 290000,
   },
   {
