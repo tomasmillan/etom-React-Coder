@@ -24,19 +24,19 @@ export default function Navbar() {
       </Link>
       <nav ref={navRef}>
         <ul className="navbarList">
-          <li>
+          <li onClick={showNavbar}>
             <Link to="/">Inicio</Link>
           </li>
-          <li>
+          <li onClick={showNavbar}>
             <Link to="/category/photography">Fotografia</Link>
           </li>
-          <li>
+          <li onClick={showNavbar}>
             <Link to="/category/home">Hogar</Link>
           </li>
-          <li>
+          <li onClick={showNavbar}>
             <Link to="/category/gamer">Gamer</Link>
           </li>
-          <li>
+          <li onClick={showNavbar}>
             <Link to="/cart">
               <CartWidget />
             </Link>
