@@ -2,11 +2,19 @@ import { useEffect, useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import "./itemCount.scss";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock = 0, initial = 0 }) => {
   const [counter, setCounter] = useState(0);
+  const [purchase, setPurchase] = useState(false);
+
   const addProduct = () => {
-    Swal.fire("Excelente", "Has agregado el producto al carrito", "success");
+    Swal.fire(
+      "Excelente",
+      "Has agregado " + counter + " productos al carrito",
+      "success"
+    );
+    setPurchase(true);
   };
 
   useEffect(() => {
@@ -23,7 +31,7 @@ const ItemCount = ({ stock = 0, initial = 0 }) => {
       setCounter(counter - 1);
     }
   };
-  return (
+  return purchase === false ? (
     <div className="addCartContainer">
       <div className="addingBtns">
         <button className="addingBtn" onClick={decrease}>
@@ -41,6 +49,10 @@ const ItemCount = ({ stock = 0, initial = 0 }) => {
         Agregar
       </button>
     </div>
+  ) : (
+    <Link to="/cart">
+      <button className="checkOutBtn">Checkout</button>
+    </Link>
   );
 };
 

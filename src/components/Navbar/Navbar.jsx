@@ -28,9 +28,6 @@ export default function Navbar() {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/">Catalogo</Link>
-          </li>
-          <li>
             <Link to="/category/photography">Fotografia</Link>
           </li>
           <li>
@@ -40,7 +37,9 @@ export default function Navbar() {
             <Link to="/category/gamer">Gamer</Link>
           </li>
           <li>
-            <CartWidget />
+            <Link to="/cart">
+              <CartWidget />
+            </Link>
           </li>
         </ul>
         <button className="closeIcon" onClick={showNavbar}>
