@@ -3,10 +3,13 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import "./itemCount.scss";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
 
-const ItemCount = ({ stock = 0, initial = 0 }) => {
+export default function ItemCount({ stock = 0, initial = 0, item }) {
   const [counter, setCounter] = useState(0);
   const [purchase, setPurchase] = useState(false);
+  const { addItem } = useContext(CartContext);
 
   const addProduct = () => {
     Swal.fire(
@@ -15,6 +18,7 @@ const ItemCount = ({ stock = 0, initial = 0 }) => {
       "success"
     );
     setPurchase(true);
+    addItem({ item, counter });
   };
 
   useEffect(() => {
@@ -54,6 +58,4 @@ const ItemCount = ({ stock = 0, initial = 0 }) => {
       <button className="checkOutBtn">Checkout</button>
     </Link>
   );
-};
-
-export default ItemCount;
+}

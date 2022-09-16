@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import "./itemDetails.scss";
 
 export default function ItemDetail({ item }) {
+  const { addItem } = useContext(CartContext);
   return (
     <>
       <div className="detailContainer">
@@ -15,7 +18,12 @@ export default function ItemDetail({ item }) {
           <div className="detailStock">
             {"Stock Disponible: " + item.productStock}
           </div>
-          <ItemCount stock={item.productStock} initial={0} />
+          <ItemCount
+            stock={item.productStock}
+            initial={0}
+            addProduct={addItem}
+            item={item}
+          />
         </div>
       </div>
     </>
