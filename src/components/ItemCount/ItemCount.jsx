@@ -1,29 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import "./itemCount.scss";
-import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../CartContext/CartContext";
 
-export default function ItemCount({ stock = 0, initial = 0, item }) {
+export default function ItemCount({ stock, onAdd }) {
   const [counter, setCounter] = useState(0);
-  const [purchase, setPurchase] = useState(false);
-  const { addItem } = useContext(CartContext);
-
-  const addProduct = () => {
-    Swal.fire(
-      "Excelente",
-      "Has agregado " + counter + " productos al carrito",
-      "success"
-    );
-    setPurchase(true);
-    addItem({ item, counter });
-  };
-
-  useEffect(() => {
-    setCounter(initial);
-  }, [initial]);
 
   const increment = () => {
     if (counter < stock) {
@@ -31,11 +11,11 @@ export default function ItemCount({ stock = 0, initial = 0, item }) {
     }
   };
   const decrease = () => {
-    if (counter > initial) {
+    if (counter === 0) {
       setCounter(counter - 1);
     }
   };
-  return purchase === false ? (
+  return (
     <div className="addCartContainer">
       <div className="addingBtns">
         <button className="addingBtn" onClick={decrease}>
@@ -47,15 +27,11 @@ export default function ItemCount({ stock = 0, initial = 0, item }) {
         </button>
       </div>
       <button
-        onClick={counter === 0 ? null : addProduct}
+        onClick={() => onAdd(counter)}
         className={`addCart ${counter === 0 ? "disabled" : ""}`}
       >
         Agregar
       </button>
     </div>
-  ) : (
-    <Link to="/cart">
-      <button className="checkOutBtn">Checkout</button>
-    </Link>
   );
 }

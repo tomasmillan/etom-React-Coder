@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "../Cards/Card.scss";
-import ItemCount from "../ItemCount/ItemCount";
 
 export default function Items(props) {
   return (
@@ -13,8 +12,6 @@ export default function Items(props) {
         <div className="details">
           <Link to={`/product/${props.id}`}>ver detalles</Link>
         </div>
-        <div>{"Stock Disponible: " + props.productStock}</div>
-        <ItemCount stock={props.productStock} initial={0} />
       </div>
     </>
   );
