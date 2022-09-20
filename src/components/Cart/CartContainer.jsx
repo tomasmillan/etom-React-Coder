@@ -1,22 +1,29 @@
 import React from "react";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
 import "./Cart.scss";
+import CartItem from "./CartItem";
 
 export default function CartContainer() {
-  const { cartItems, removeItem, clear } = useContext(CartContext);
+  const { cartItems, totalPrice, clear } = useContext(CartContext);
+
+  if (cartItems.length === 0) {
+    return (
+      <>
+        <p>No hay elementos en el carrito</p>
+        <Link to={"/"}> Seguir comprando</Link>
+      </>
+    );
+  }
   return (
-    <>
-      <div className="cartContainer">
-        <button onClick={clear}>Limpiar Carrito</button>
-        {cartItems.map((item) => (
-          <>
-            <h2>{item.title}</h2>
-            <h2>{item.counter}</h2>
-            <button onClick={removeItem}>Eliminar Producto</button>
-          </>
-        ))}
-      </div>
-    </>
+    <div>
+      {cartItems.map((product) => (
+        <CartItem key={product.id} product={product} />
+      ))}
+      <p>Total: {totalPrice()}</p>
+      <button onClick={clear}> Limpiar Carrito</button>
+      <button> Finalizar Compra</button>
+    </div>
   );
 }
