@@ -15,13 +15,30 @@
         color: beige;
     }
 }
-.cartContainer{
+.cartContainer, .cartEmpty{
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 1rem;
     align-items: center;
     min-height: 75vh;
     background: rgba(0, 128, 0, 0.144);
+
+    .continue{
+        padding: 10px;
+        margin: 2rem;
+        background-color: rgb(89, 93, 193);
+        border-radius: 10px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        text-decoration: none;
+
+        &:hover{
+            
+            background-color: rgb(27, 31, 132);
+        }
+        
+    }
 
     p{
         font-size: 1.5rem;

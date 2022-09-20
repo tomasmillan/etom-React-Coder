@@ -10,10 +10,13 @@ export default function CartContainer() {
 
   if (cartItems.length === 0) {
     return (
-      <>
+      <div className="cartEmpty">
         <p>No hay elementos en el carrito</p>
-        <Link to={"/"}> Seguir comprando</Link>
-      </>
+        <Link to={"/"} className="continue">
+          {" "}
+          Seguir comprando
+        </Link>
+      </div>
     );
   }
   return (
