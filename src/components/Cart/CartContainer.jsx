@@ -17,13 +17,20 @@ export default function CartContainer() {
     );
   }
   return (
-    <div>
+    <div className="cartContainer">
       {cartItems.map((product) => (
         <CartItem key={product.id} product={product} />
       ))}
-      <p>Total: {totalPrice()}</p>
-      <button onClick={clear}> Limpiar Carrito</button>
-      <button> Finalizar Compra</button>
+      <div className="cartDetails">
+        <p>Total: ${totalPrice()}</p>
+        <div className="cartBtns">
+          <button onClick={clear} className="clean">
+            {" "}
+            Limpiar Carrito
+          </button>
+          <button className="end"> Finalizar Compra</button>
+        </div>
+      </div>
     </div>
   );
 }
