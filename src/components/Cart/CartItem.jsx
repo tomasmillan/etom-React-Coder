@@ -7,28 +7,28 @@ export default function CartItem({ product }) {
   const { removeItem } = useContext(CartContext);
   return (
     <>
-      <div className="itemContainerCart">
-        <div className="itemCart">
+      <div className="itemCart">
+        <div className="box">
           <img className="imgCart" src={product.img} alt={product.title} />
-          <div className="tags">
-            <p className="cartTitle">{product.title}</p>
-            <div className="tag2">
-              <p className="cartPrice">$ {product.price}</p>
-              <p className="cartQty">
+          <div className="content">
+            <h4 className="cartTitle">{product.title}</h4>
+            <p className="cartPrice">$ {product.price}</p>
+            <div className="cartSub">
+              <h3>
                 Cantidad
-                <p>{product.qty}</p>
-              </p>
-              <p className="cartText">
+                <p className="semiBold">{product.qty}</p>
+              </h3>
+              <h3>
                 Subtotal
-                <p className="price">$ {product.qty * product.price}</p>
-              </p>
+                <p className="semiBold">$ {product.qty * product.price}</p>
+              </h3>
             </div>
+            <button className="erase" onClick={() => removeItem(product.id)}>
+              <i className="trashIcon">
+                <FaTrash />
+              </i>
+            </button>
           </div>
-          <button className="erase" onClick={() => removeItem(product.id)}>
-            <i className="trashIcon">
-              <FaTrash />
-            </i>
-          </button>
         </div>
       </div>
     </>

@@ -9,17 +9,6 @@ const ItemList = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    // if (id) {
-    //   promiseArray(
-    //     products.filter((itemProduct) => itemProduct.category === id)
-    //   )
-    //     .then((result) => setProducts(result))
-    //     .catch((err) => console.log(err));
-    // } else {
-    //   promiseArray(products)
-    //     .then((result) => setProducts(result))
-    //     .catch((err) => console.log(err));
-    // }
     firestoreFetch(id).then((res) => {
       setProducts(res);
     });

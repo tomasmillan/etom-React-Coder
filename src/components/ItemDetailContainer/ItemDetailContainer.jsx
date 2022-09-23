@@ -3,8 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetails";
 import { ClipLoader } from "react-spinners";
-import products from "../../utils/productList";
-import promiseArray from "../../utils/promise";
+import { firestoreFetchOne } from "../../utils/firebaseConfig";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -12,14 +11,14 @@ const ItemDetailContainer = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-    promiseArray(products.find((item) => item.id === parseInt(id)))
-      .then((product) => {
-        setItem(product);
+    firestoreFetchOne(id)
+      .then((result) => {
+        console.log(result);
+        setItem(result);
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
-  }, [id, item.id]);
+  }, [id]);
 
   const override = {
     display: "flex",

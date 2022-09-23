@@ -5,7 +5,6 @@ export const CartContext = createContext();
 
 export default function CartContextProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems);
 
   const isInCart = (id) =>
     cartItems.find((item) => item.id === id) ? true : false;
@@ -21,13 +20,11 @@ export default function CartContextProvider({ children }) {
           cartItems.map((product) => {
             if (product.id === item.id) {
               product.counter += qty;
-              console.log("soy linea 31" + product);
             }
             return product;
           })
         )
       : setCartItems([...cartItems, qtyCart]);
-    console.log("soy linea 37" + cartItems);
   };
 
   const removeItem = (id) => {
@@ -37,7 +34,6 @@ export default function CartContextProvider({ children }) {
   const clear = () => {
     setCartItems([]);
   };
-  console.log(cartItems);
 
   const totalPrice = () => {
     return cartItems.reduce((prev, act) => prev + act.qty * act.price, 0);
