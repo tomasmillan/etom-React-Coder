@@ -10,9 +10,9 @@ const LoginButton = () => {
     <button onClick={() => loginWithRedirect()}>
       <AiOutlineLogin
         style={{
-          fontSize: "30px",
+          fontSize: "2rem",
+          fontWeight: "600",
           transform: "rotate(180deg)",
-          margin: "0.5rem",
         }}
       />
     </button>

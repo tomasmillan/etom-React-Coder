@@ -3,7 +3,9 @@ const products = [
     id: 1,
     title: "PC Gamer",
     category: "gamer",
-    img: "https://battler.gg/wp-content/uploads/2021/04/comprar-pc-gamer-2021-battler.jpg",
+    img: [
+      "https://battler.gg/wp-content/uploads/2021/04/comprar-pc-gamer-2021-battler.jpg",
+    ],
     description:
       "Memoria RAM: 16GB, Disco Duro: 480GB, Procesador: AMD Ryzen 7 4900 series",
     productStock: 5,

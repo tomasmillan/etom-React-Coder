@@ -1,99 +1,98 @@
 header{
-    display: flex;
-    background-color: #E8AE68;
-    justify-content: space-between;
-    color: rgb(6, 6, 6);
-    align-items: center;
-    padding: 0 3rem;
-    z-index: 20;
-  }
-nav{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 20;
+  max-width: 1366px;
+  max-height: 80px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #90ABC3;
+  z-index: 20;
 
-
-  & .navbarList{
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  .navbarList{
     display: inline-flex;
-    align-items: center;
+    list-style: none;
     gap: 1rem;
+
+    li{
+      font-size: 1.2rem;
+
+      .link{
+        text-decoration: none;
+        color: #FDFFFC;
+        font-weight: 600;
+        letter-spacing: 2px;
+
+        &:hover{
+          color: #020100;
+        }
+      }
+    }
+  }
+  
+  
+  .log{
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+
+     button{
+      background: transparent;
+      border: transparent;
+      cursor: pointer;
+      font-size: 2rem;
   }
 
-  & a{
-    color: inherit;
-    text-decoration: none;
+  .navProfileImg{
+    width: 30px;
+    border-radius: 50%;
   }
-  & a:hover{
-    color: beige;
   }
 }
+.menuIcon, .closeIcon{
+  visibility: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .menuIcon{
+    visibility: visible;
 
-  .menuIcon, .closeIcon{
-    margin-top: 2px;
-    font-size: 30px;
-    visibility: hidden;
-    display: none;
   }
-  button{
+  .closeIcon{
     background: transparent;
-    border: transparent;
-    cursor: pointer;
-  }
-  .log{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-
-    .navProfileImg{
-      width: 30px;
-      border-radius: 50%;
-    }
-  }
-  @media only screen and (max-width: 1024px) {
-    .menuIcon{
-      display: block;
-      visibility: visible;
-
-    }
-    .closeIcon{
-      display: block;
+      border: transparent;
+      cursor: pointer;
       visibility: visible;
       position: absolute;
       top: 2rem;
-      right: 2rem;
+      right: 4rem;
       font-size: 2rem;
-      font-weight: 600;
-    }
-    nav{
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #E8AE68;
-      transition: 0.5s;
-      transform: translateY(-100vh);
-    }
-    .navbarList{
-      flex-direction: column;    
-      justify-content: center;  
-      align-items: center;
-      font-size: 1.5rem;
-      gap: 2rem;
-    }
-    .responsive{
-      transform: translateY(0);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    header{
-      justify-content: space-between;
-    }
   }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(-100vh);
+    background-color: #90ABC3;
+    z-index: 2;
+  }
+  .navbarList{
+    flex-direction: column;    
+    justify-content: center;  
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+  .responsive{
+    transform: translateY(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header{
+    justify-content: space-between;
+  }
+}

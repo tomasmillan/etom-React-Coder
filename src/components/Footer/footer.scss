@@ -1,46 +1,86 @@
 .footerContainer{
+    width: 100%;
     display: flex;
-    align-items: center;
-    background: #344;
+    flex-direction: column;
+    background: #D9D9D9;
 
-    .usefulLinks{
-        display: flex;
-        flex-direction: column;
-        flex-basis: 50%;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-
-        li{
-            text-decoration: none;
-            list-style: none;
-        }
-        .footerLinks{
-            color: white;
-            text-decoration: none;
-        }
-    }
-    .suscribeForm{
+    .row1{
         display: inline-flex;
-        flex-basis: 50%;
-        justify-content: center;
-        
-        input{
-            padding: 10px;
-            border: none;
-            margin-left: 10px;
-            border-radius: 1rem;
+        padding: 1.4rem;
+        gap: 1.5rem;
+
+        .usefulLinks, .usefulLinks2, .usefulLinks3{
+            list-style: none;
+            margin-left: 1rem;
+            line-height: 2rem;
+
+            .footerLinks{
+                text-decoration: none;
+                color: #262626;
+                font-size: 1.2rem;
+                transition: 0.2s;
+
+                &:hover{
+                    color: #888888;
+                }
+            }
+        }
+        .ftTitles{
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
         }
     }
     .copyAuthor{
-        position: fixed;
-        bottom: 0;
-        display: inline-flex;
-        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background: #020202;
         color: white;
-        background-color: black;
         justify-content: center;
-        align-items: center;
-        gap: 8px;
+        
+        
+        .center{
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .copyright{
+            font-size: 1rem;
+        }
+    
+        .logoFt{
+            position: absolute;
+            left: 0;
+            bottom: 1;
+            color: white;
+            font-size: 0.8rem;
+            padding-left: 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
     }
+}
+@media only screen and (max-width: 550px) {    
+   .row1{
+    flex-direction: column;
+    text-align: center;
+   }
+   .copyAuthor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .center{
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .copyright{
+        font-size: 10px;
+    }
+
+    .logoFt{
+        font-size: 10px;
+    }
+}
 }

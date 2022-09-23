@@ -1,4 +1,3 @@
-import logo from "../Logo/logo.svg";
 import "../Logo/logoStyle.scss";
 import "../Navbar/navbar.scss";
 import { FaBars } from "react-icons/fa";
@@ -20,25 +19,33 @@ export default function Navbar() {
   return (
     <header>
       <Link to="/" className="logo">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h2 className="App-logo">tom tech</h2>
       </Link>
       <nav ref={navRef}>
         <ul className="navbarList">
           <li onClick={showNavbar}>
-            <Link to="/">Inicio</Link>
+            <Link to="/" className="link">
+              Inicio
+            </Link>
           </li>
           <li onClick={showNavbar}>
-            <Link to="/category/photography">Fotografia</Link>
+            <Link to="/category/photography" className="link">
+              Computación
+            </Link>
           </li>
           <li onClick={showNavbar}>
-            <Link to="/category/home">Hogar</Link>
+            <Link to="/category/home" className="link">
+              Audio
+            </Link>
           </li>
           <li onClick={showNavbar}>
-            <Link to="/category/gamer">Gamer</Link>
+            <Link to="/category/gamer" className="link">
+              Video
+            </Link>
           </li>
           <li onClick={showNavbar}>
-            <Link to="/cart">
-              <CartWidget />
+            <Link to="/category/gamer" className="link">
+              Videojuegos
             </Link>
           </li>
         </ul>
@@ -47,6 +54,11 @@ export default function Navbar() {
         </button>
       </nav>
       <div className="log">
+        <li>
+          <Link to="/cart">
+            <CartWidget />
+          </Link>
+        </li>
         {isAuthenticated ? (
           <>
             <Link to="/profile">
