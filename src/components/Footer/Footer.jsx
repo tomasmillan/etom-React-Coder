@@ -15,17 +15,17 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link className="footerLinks" to="/category/photography">
+            <Link className="footerLinks" to="/category/computacion">
               Computación
             </Link>
           </li>
           <li>
-            <Link className="footerLinks" to="/category/home">
+            <Link className="footerLinks" to="/category/audio">
               Audio
             </Link>
           </li>
           <li>
-            <Link className="footerLinks" to="/category/gamer">
+            <Link className="footerLinks" to="/category/video">
               Video
             </Link>
           </li>

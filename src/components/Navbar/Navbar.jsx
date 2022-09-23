@@ -29,17 +29,17 @@ export default function Navbar() {
             </Link>
           </li>
           <li onClick={showNavbar}>
-            <Link to="/category/photography" className="link">
+            <Link to="/category/computacion" className="link">
               Computación
             </Link>
           </li>
           <li onClick={showNavbar}>
-            <Link to="/category/home" className="link">
+            <Link to="/category/audio" className="link">
               Audio
             </Link>
           </li>
           <li onClick={showNavbar}>
-            <Link to="/category/gamer" className="link">
+            <Link to="/category/video" className="link">
               Video
             </Link>
           </li>
