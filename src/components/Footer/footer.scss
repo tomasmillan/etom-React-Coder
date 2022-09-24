@@ -61,7 +61,7 @@
         }
     }
 }
-@media only screen and (max-width: 550px) {    
+@media only screen and (max-width: 530px) {    
    .row1{
     flex-direction: column;
     text-align: center;
@@ -80,7 +80,8 @@
     }
 
     .logoFt{
-        font-size: 10px;
+
+        display: none
     }
 }
 }

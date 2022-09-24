@@ -6,7 +6,7 @@ import "./Cart.scss";
 import CartItem from "./CartItem";
 
 export default function CartContainer() {
-  const { cartItems, totalPrice, clear } = useContext(CartContext);
+  const { cartItems, totalPrice, clear, end } = useContext(CartContext);
 
   if (cartItems.length === 0) {
     return (
@@ -45,7 +45,10 @@ export default function CartContainer() {
               {" "}
               Limpiar Carrito
             </button>
-            <button className="end btnC"> Finalizar Compra</button>
+            <button className="end btnC" onClick={end}>
+              {" "}
+              Finalizar Compra
+            </button>
           </div>
         </div>
       </div>

@@ -96,3 +96,8 @@ header{
     justify-content: space-between;
   }
 }
+@media only screen and (min-width: 1368px) {
+ header{
+  max-width: 100%;
+ }
+}
