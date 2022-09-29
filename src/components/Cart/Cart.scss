@@ -46,10 +46,11 @@
   max-width: 1100px;
   margin: 0 auto;
   min-height: 80vh;
+
   .cartHeader{
     padding: 2rem 0;
     text-align: center;
-  }
+    }
   .project{
     display: flex;
     flex-wrap: wrap;
@@ -137,6 +138,7 @@
     padding: 1.2rem;
     width: 100%;
     position: relative;
+    background-color: rgba(210, 202, 202, 0.384);
 
     .cartTitle{
         margin-bottom: 1rem;

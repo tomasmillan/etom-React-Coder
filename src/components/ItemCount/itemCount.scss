@@ -7,12 +7,12 @@
     font-size: 1.5rem;
 
     .addingBtn{
-        border: 2px solid #344;
         padding: 0.4rem;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         color: #344;
+
 
         &:hover{
             color: black;
@@ -25,9 +25,9 @@
         font-size: 1.2rem;
         font-weight: 500;
         background: #011638;
-        color: #F3DFC1;
+        color: #f3efe9;
         transition: 0.4s;
-        border-radius: 10px;
+        border: transparent;
 
         &:hover{
             background: #264e64;
@@ -49,12 +49,16 @@
     }
 }
 .checkOutBtn{
-    padding: 8px;
+    padding: 6px;
     background: #264e64;
     text-transform: uppercase;
-    border-radius: 10px;
     color: white;
+    border: transparent;
     font-size: 20px;
+
+    &:hover{
+        background: #38708e;
+    }
 }
 @media only screen and (max-width: 1024px) {
     .addCartContainer{

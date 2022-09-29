@@ -11,21 +11,19 @@ export default function CartContextProvider({ children }) {
     cartItems.find((item) => item.id === id) ? true : false;
 
   const addProduct = (item, qty) => {
-    let qtyCart = {
-      ...item,
-      qty,
-    };
+    const adding = { ...item, qty };
+    const newCart = [...cartItems];
 
-    isInCart(item.id)
-      ? setCartItems(
-          cartItems.map((product) => {
-            if (product.id === item.id) {
-              product.counter += qty;
-            }
-            return product;
-          })
-        )
-      : setCartItems([...cartItems, qtyCart]);
+    if (!isInCart(item.id)) {
+      newCart.push(adding);
+    } else {
+      newCart.forEach((prod) => {
+        if (prod.id === adding.id) {
+          prod.qty += qty;
+        }
+      });
+    }
+    setCartItems(newCart);
   };
 
   const removeItem = (id) => {
@@ -63,6 +61,7 @@ export default function CartContextProvider({ children }) {
       const db = getFirestore();
       const ordersCol = collection(db, "orders");
       addDoc(ordersCol, order).then(({ id }) => console.log(id));
+      clear();
     };
     return finish();
   };
