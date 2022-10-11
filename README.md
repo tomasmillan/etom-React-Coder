@@ -3,9 +3,8 @@
 ## Proyecto del curso de React de CoderHouse
 
 ### Pantallaso del avance del proyecto
-https://www.loom.com/share/85e85897851e44dd9bfc60418d0277ba
-
-El proyecto consiste en un e-commerce, en mi caso lo estoy desarrollando sobre productos tecnologicos, simulando como si fuese una tienda de electronica mas tirado al ocio.
+![image] ()
+El proyecto consiste en un e-commerce, sobre productos tecnologicos de ocio y profesionales.
 
 Para este proyecto utilice las siguientes librerias y dependencias.
 Auth0, para poder hacer registro y autenticacion de usuarios
