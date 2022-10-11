@@ -45,10 +45,12 @@ export default function CartContainer() {
               {" "}
               Limpiar Carrito
             </button>
-            <button className="end btnC" onClick={end}>
-              {" "}
-              Finalizar Compra
-            </button>
+            <Link to="/thanks">
+              <button className="end btnC" onClick={end}>
+                {" "}
+                Finalizar Compra
+              </button>
+            </Link>
           </div>
         </div>
       </div>

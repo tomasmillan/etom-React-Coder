@@ -43,11 +43,12 @@ export default function CartContextProvider({ children }) {
   const end = () => {
     const newDate = new Date().toLocaleString();
     const order = {
+      //isauthenticated
       buyer: {
-        name: "Tomas",
-        email: "tomas@mail.com",
-        phone: "12345",
-        address: "siempre viva 834",
+        name: "Tomas", //user.name
+        email: "tomas@mail.com", //user.mail
+        phone: "12345", //user.mail
+        address: "siempre viva 834", //user.adress
       },
       items: cartItems.map((product) => ({
         id: product.id,
