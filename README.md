@@ -3,7 +3,7 @@
 ## Proyecto del curso de React de CoderHouse
 
 ### Pantallaso del avance del proyecto
-![image] ()
+![image] (https://github.com/tomasmillan/etom-React-Coder/blob/main/src/utils/imgs/endingGif.gif)
 El proyecto consiste en un e-commerce, sobre productos tecnologicos de ocio y profesionales.
 
 Para este proyecto utilice las siguientes librerias y dependencias.
