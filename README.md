@@ -2,11 +2,11 @@
 
 ## Proyecto del curso de React de CoderHouse
 
-### Pantallaso del avance del proyecto
+### Pantallaso del proyecto
  ![image](https://github.com/tomasmillan/etom-React-Coder/blob/main/src/utils/imgs/endingGif.gif)
 
 
-El proyecto consiste en un e-commerce, sobre productos tecnologicos de ocio y profesionales.
+El proyecto consiste en un e-commerce, sobre productos tecnologicos de uso profesional y ocio.
 
 Para este proyecto utilice las siguientes librerias y dependencias.
 Auth0, para poder hacer registro y autenticacion de usuarios
@@ -25,3 +25,5 @@ Una vez que tengas todo instalado y lo quieras ver en tu browser te recomiendo q
 ## `npm start`
 
 Esta aplicacion se te va abrir en [http://localhost:3000](http://localhost:3000)
+
+# Puedes visitar su funcionamiento online en el siguiente link https://etom-react-coder.vercel.app/
